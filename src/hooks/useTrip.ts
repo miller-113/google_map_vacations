@@ -10,7 +10,7 @@ export const useTrip = () => {
   useEffect(() => {
     const fetchTrip = async () => {
       try {
-        const response = await fetch("/mock-trip.json");
+        const response = await fetch(`${import.meta.env.BASE_URL}mock-trip.json`);
         if (!response.ok) {
           throw new Error("Failed to fetch trip data");
         }
